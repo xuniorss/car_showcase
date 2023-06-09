@@ -6,7 +6,7 @@ export const Footer = () => {
    const currentYear = new Date().getFullYear()
 
    return (
-      <footer className="mt-5 flex flex-col border-t border-gray-100 text-black-100">
+      <footer className="mt-5 flex flex-col  border-t border-gray-100 text-black-100">
          <div className="flex flex-wrap justify-between gap-5 px-6 py-10 max-md:flex-col sm:px-16">
             <div className="flex flex-col items-start justify-start gap-6">
                <Image
@@ -26,15 +26,17 @@ export const Footer = () => {
                {footerLinks.map((link) => (
                   <div key={link.title} className="footer__link">
                      <h3 className="font-bold">{link.title}</h3>
-                     {link.links.map((item) => (
-                        <Link
-                           key={item.title}
-                           href={item.url}
-                           className="text-gray-500"
-                        >
-                           {item.title}
-                        </Link>
-                     ))}
+                     <div className="flex flex-col gap-5">
+                        {link.links.map((item) => (
+                           <Link
+                              key={item.title}
+                              href={item.url}
+                              className="text-gray-500"
+                           >
+                              {item.title}
+                           </Link>
+                        ))}
+                     </div>
                   </div>
                ))}
             </div>
