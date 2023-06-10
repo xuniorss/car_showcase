@@ -1,6 +1,7 @@
 'use client'
 
 import { CarProps } from '@/types'
+import { generateCarImageUrl } from '@/utils'
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import { Fragment } from 'react'
@@ -57,7 +58,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                            <div className="flex flex-1 flex-col gap-3">
                               <div className="relative h-40 w-full rounded-lg bg-pattern bg-cover bg-center">
                                  <Image
-                                    src="/hero.png"
+                                    src={generateCarImageUrl(car)}
                                     alt="car model"
                                     fill
                                     priority
@@ -68,7 +69,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                               <div className="flex gap-3">
                                  <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
                                     <Image
-                                       src="/hero.png"
+                                       src={generateCarImageUrl(car, '29')}
                                        alt="car model"
                                        fill
                                        priority
@@ -77,7 +78,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                  </div>
                                  <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
                                     <Image
-                                       src="/hero.png"
+                                       src={generateCarImageUrl(car, '33')}
                                        alt="car model"
                                        fill
                                        priority
@@ -86,7 +87,7 @@ export const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                  </div>
                                  <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
                                     <Image
-                                       src="/hero.png"
+                                       src={generateCarImageUrl(car, '13')}
                                        alt="car model"
                                        fill
                                        priority
