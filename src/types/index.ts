@@ -61,3 +61,8 @@ export interface CustomFilterProps {
    title: string
    options: Array<OptionProps>
 }
+
+export interface ShowMoreProps {
+   pageNumber: number
+   isNext: boolean
+}
